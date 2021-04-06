@@ -1,0 +1,23 @@
+{
+  "name": "wbdv-sp21-haoting-qiu-server-node",
+  "version": "1.0.0",
+  "description": "the server side for Online Learning Management System",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saryn-equinox/wbdv-sp21-haoting-qiu-server-node.git"
+  },
+  "author": "Haoting Qiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saryn-equinox/wbdv-sp21-haoting-qiu-server-node/issues"
+  },
+  "homepage": "https://github.com/saryn-equinox/wbdv-sp21-haoting-qiu-server-node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
+}
