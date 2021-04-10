@@ -21,4 +21,8 @@ require('./controllers/quizzes-controller')(app)
 require('./controllers/question-controller')(app) 
 require('./controllers/quiz-attempts-controller')(app)
 
+app.get("/", (req, res) => {
+    res.send("Welcome, please use /api/xxx to access data")
+})
+
 app.listen(process.env.PORT || 3000)
