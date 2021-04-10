@@ -1,4 +1,4 @@
-const quizeService = require("../services/quiz-service")
+const quizzesService = require("../services/quiz-service")
 
 module.exports = function (app) {
     app.get('/api/quizzes', (req, res) => 
