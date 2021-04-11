@@ -1,4 +1,4 @@
-const quizAttemptModel = require('../models/quiz-attempts/quiz-attempts-model');
+const quizAttemptsModel = require('../models/quiz-attempts/quiz-attempts-model');
 
 const scoreQuiz = (questions) => {
     let numberOfCorrectQuestions = 0;
@@ -10,7 +10,12 @@ const scoreQuiz = (questions) => {
 const findAttemptsForQuiz = (qzid) => quizAttemptsModel.find({quiz: qzid}).populate('quiz', 'title _id')
 
 const createAttempt = (qid, attempt) => {
-    quizAttemptModel.create({
+    // console.log({
+    //     quiz : qid,
+    //     answers : attempt,
+    //     score : scoreQuiz(attempt)
+    // })
+    return quizAttemptsModel.create({
         quiz : qid,
         answers : attempt,
         score : scoreQuiz(attempt)

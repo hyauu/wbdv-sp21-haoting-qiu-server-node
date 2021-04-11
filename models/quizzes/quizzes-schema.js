@@ -6,6 +6,6 @@ const quizzesSchema = mongoose.Schema({
         type : String,
         ref : "QuestionsModel"
     }]
-}, {collection : "questions"});
+}, {collection : "quizzes"});
 
 module.exports = quizzesSchema;

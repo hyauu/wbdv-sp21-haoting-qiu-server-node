@@ -8,6 +8,6 @@ const quizAttempts = mongoose.Schema({
         ref : "QuizzesModel"
     },
     answers : [questionsSchema]
-}, {collection : "quizAttemps"});
+}, {collection : "quizAttempts"});
 
 module.exports = quizAttempts;
