@@ -1,7 +1,5 @@
+require('dotenv').config()
 const mongoose = require("mongoose");
-const uri = "mongodb+srv://haoting:UF3zfFT7zMB2Pj4Y@whiteboard.xxzse.mongodb.net/whiteboard?retryWrites=true&w=majority";
-
-
 
 var express = require('express')
 var app = express()
@@ -17,7 +15,7 @@ app.use(function (req, res, next) {
     next();
 })
 
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env["MONGODB_URI"], {useNewUrlParser: true, useUnifiedTopology: true});
 
 require('./controllers/quizzes-controller')(app) 
 require('./controllers/question-controller')(app) 
