@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const uri = "mongodb+srv://haoting:UF3zfFT7zMB2Pj4Y@whiteboard.xxzse.mongodb.net/whiteboard?retryWrites=true&w=majority";
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+
 
 
 var express = require('express')
@@ -16,6 +16,8 @@ app.use(function (req, res, next) {
         'GET, POST, PUT, PATCH, DELETE, OPTIONS');
     next();
 })
+
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
 require('./controllers/quizzes-controller')(app) 
 require('./controllers/question-controller')(app) 
