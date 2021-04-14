@@ -7,7 +7,7 @@ const scoreQuiz = (questions) => {
     return 100 * numberOfCorrectQuestions / questions.length;
 }
 
-const findAttemptsForQuiz = (qzid) => quizAttemptsModel.find({quiz: qzid}).populate('quiz', 'title _id')
+const findAttemptsForQuiz = (qzid) => quizAttemptsModel.find({quiz: qzid}).populate('quiz', 'title _id').exec()
 
 const createAttempt = (qid, attempt) => {
     // console.log({

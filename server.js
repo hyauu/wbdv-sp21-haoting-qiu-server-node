@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 
 mongoose.connect(process.env["MONGODB_URI"], {useNewUrlParser: true, useUnifiedTopology: true});
 
-require('./controllers/quizzes-controller')(app) 
+require('./controllers/quizzes-controller')(app)
 require('./controllers/question-controller')(app) 
 require('./controllers/quiz-attempts-controller')(app)
 
